@@ -285,7 +285,7 @@ function Set-TerraformEnvVarsForLogging
 	{
 		if (-not(Test-Path -Path $tfLogPath))
 		{
-			New-Item -Path $tfLogPath -ItemType File -Verbose
+			New-Item -Path $tfLogPath -ItemType File -Force -Verbose
 		}
 		$env:TF_LOG = "INFO"
 		$env:TF_LOG_PATH = $tfLogPath
