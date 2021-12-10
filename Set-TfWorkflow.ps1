@@ -268,6 +268,15 @@ function New-TerraformDirectories
 }
 #endregion FUNCTIONs
 
+function Set-TerraformEnvVarsForLogging 
+{
+	[CmdletBinding()]
+	param()
+
+	$env:TF_LOG = "INFO"
+	$env:TF_LOG_PATH=".\live\glb\tf.log"
+}
+
 #region INITIALIZE VALUES
 
 # Create Log file
@@ -452,6 +461,9 @@ terraform {
 	#>
 
 } # end else
+
+Set-TerraformEnvVarsForLogging -Verbose
+
 #endregion MAIN
 
 #region SUMMARY
