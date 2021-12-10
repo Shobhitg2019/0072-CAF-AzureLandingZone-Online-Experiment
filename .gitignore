@@ -57,3 +57,6 @@ Temporary Items
 
 # Diagrams
 **/diagrams/**
+
+# Include modules
+!**/modules/**
