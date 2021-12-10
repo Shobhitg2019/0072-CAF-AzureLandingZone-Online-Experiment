@@ -9,16 +9,6 @@ variable "resource_number" {
     error_message = "This value must have be between 10 to 16."
   }
 }
-variable "resource_prefix" {
-  type = string
-  description = "Prefix for most Azure resources."
-}
-
-variable "resource_group_code" {
-  type = string
-  description = "Three letter code for resource group."
-}
-
 variable "series_suffix" {
   type = string
   description = "Series suffix for Azure resources."
@@ -39,10 +29,6 @@ variable "tags" {
   description = "Resource tags."
 }
 
-variable "kvt_code" {
-  type = string 
-  description = "Three letter suffix code for key vault."
-}
 variable "kvt_retention_days" {
   type = number
   description = "Key Vault soft delete retention days."
@@ -59,12 +45,21 @@ variable "tenant_id" {
     sensitive = true
 }
 
-variable "rsv_code" {
-    type = string
-    description = "Three letter code for recovery services vault."
-}
-
 variable "rsv_sku" {
   type = string
   description = "SKU for recovery services vault."
+}
+variable "vnt" {
+  type = map(string)
+  description = "Virtual network object."
+}
+
+variable "resource_codes" {
+  type = map(string)
+  description = "Azure resource codes."
+}
+
+variable "sta" {
+  type = map(string)
+  description = "Azure storage resource attributes."
 }

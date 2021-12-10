@@ -276,7 +276,8 @@ function Set-TerraformEnvVarsForLogging
 	)
 
 	$tfLogFile = "tf.log"
-	$tfLogDirLve = Join-Path -Path $tfDirs.top -ChildPath $tfDirs.lve
+	$fullCurrentPath = (Resolve-Path -Path $tfDirs.top).Path 
+	$tfLogDirLve = Join-Path -Path $fullCurrentPath -ChildPath $tfDirs.lve
 	$tfLogDir = Join-Path -Path $tfLogDirLve -ChildPath $tfDirs.glb 
 	$tfLogPath = Join-Path -Path $tfLogDir -ChildPath $tfLogFile
 

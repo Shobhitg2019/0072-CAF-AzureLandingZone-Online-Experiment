@@ -36,24 +36,24 @@ locals {
 # mgt
 # 01. resource group 
 resource "azurerm_resource_group" "rgp" {
-    name = "${var.resource_prefix}-${var.resource_group_code}-${var.resource_number}"
+    name = "${var.resource_codes.prefix}-${var.resource_codes.resource_group}-${var.resource_number}"
     location = var.region
     tags = var.tags
 }
 
 # 02. storage account
 resource "azurerm_storage_account" "sta" {
-  name = "1${var.storage_infix}${local.rnd_string}"
+  name = "1${var.resource_codes.storage}${local.rnd_string}"
   resource_group_name = azurerm_resource_group.rgp.name 
   location = azurerm_resource_group.rgp.location
-  account_tier = "Standard"
-  account_replication_type = "LRS"
+  account_tier = var.sta.tier 
+  account_replication_type = var.sta.replication
   tags = var.tags
 }
 
 # 03. key vault
 resource "azurerm_key_vault" "kvt" {
-  name = "${var.resource_prefix}-${local.rnd_string}-${var.kvt_code}-${var.resource_number}"
+  name = "${var.resource_codes.prefix}-${local.rnd_string}-${var.resource_codes.key_vault}-${var.resource_number}"
   location = azurerm_resource_group.rgp.location 
   resource_group_name = azurerm_resource_group.rgp.name 
   enabled_for_disk_encryption = true
@@ -66,7 +66,7 @@ resource "azurerm_key_vault" "kvt" {
 
 # 04. recovery services vault
 resource "azurerm_recovery_services_vault" "rsv" {
-  name = "${var.resource_prefix}-${local.rnd_string}-${var.rsv_code}-${var.resource_number}"
+  name = "${var.resource_codes.prefix}-${local.rnd_string}-${var.resource_codes.recovery_vault}-${var.resource_number}"
   location = azurerm_resource_group.rgp.location
   resource_group_name = azurerm_resource_group.rgp.name 
   sku = var.rsv_sku
@@ -76,6 +76,12 @@ resource "azurerm_recovery_services_vault" "rsv" {
 
 # net
 # 05. vnet 
+resource "azurerm_virtual_network" "vnt" {
+  name = "${var.resource_codes.prefix}-${var.resource_codes.vnet}-${var.resource_number}"
+  location = azurerm_resource_group.rgp.location
+  resource_group_name = azurerm_resource_group.rgp.name 
+
+}
 # 06. subnets
 # 08. nsgs 
 # 09. bastion
@@ -90,9 +96,3 @@ resource "azurerm_recovery_services_vault" "rsv" {
 
 # data
 # 14. sql server
-
-
-
-
-
-
