@@ -271,10 +271,28 @@ function New-TerraformDirectories
 function Set-TerraformEnvVarsForLogging 
 {
 	[CmdletBinding()]
-	param()
+	param(
+		[hashtable]$tfDirs
+	)
 
-	$env:TF_LOG = "INFO"
-	$env:TF_LOG_PATH=".\live\glb\tf.log"
+	$tfLogFile = "tf.log"
+	$tfLogDirLve = Join-Path -Path $tfDirs.top -ChildPath $tfDirs.lve
+	$tfLogDir = Join-Path -Path $tfLogDirLve -ChildPath $tfDirs.glb 
+	$tfLogPath = Join-Path -Path $tfLogDir -ChildPath $tfLogFile
+
+	if (Test-Path -Path $tfLogDir) 
+	{
+		if (-not(Test-Path -Path $tfLogPath))
+		{
+			New-Item -Path $tfLogPath -ItemType File -Verbose
+		}
+		$env:TF_LOG = "INFO"
+		$env:TF_LOG_PATH = $tfLogPath
+	}
+	else
+	{
+		Write-Output "Can't find Terraform log directory: $tfLogDir"
+	}
 }
 
 #region INITIALIZE VALUES
@@ -462,7 +480,7 @@ terraform {
 
 } # end else
 
-Set-TerraformEnvVarsForLogging -Verbose
+Set-TerraformEnvVarsForLogging -tfDirs $directories -Verbose
 
 #endregion MAIN
 
