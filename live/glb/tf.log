@@ -1,10 +1,536 @@
-2021-12-10T10:42:57.294-0500 [INFO]  Terraform version: 1.0.11
-2021-12-10T10:42:57.295-0500 [INFO]  Go runtime version: go1.16.4
-2021-12-10T10:42:57.296-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "init"}
-2021-12-10T10:42:57.314-0500 [INFO]  CLI command args: []string{"init"}
-2021-12-10T10:44:18.162-0500 [INFO]  Terraform version: 1.0.11
-2021-12-10T10:44:18.162-0500 [INFO]  Go runtime version: go1.16.4
-2021-12-10T10:44:18.163-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "plan"}
-2021-12-10T10:44:18.172-0500 [INFO]  CLI command args: []string{"plan"}
-2021-12-10T10:44:18.181-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
-2021-12-10T10:44:18.181-0500 [INFO]  backend/local: starting Plan operation
+2021-12-10T10:48:26.429-0500 [INFO]  Terraform version: 1.0.11
+2021-12-10T10:48:26.430-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-10T10:48:26.430-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "init"}
+2021-12-10T10:48:26.439-0500 [INFO]  CLI command args: []string{"init"}
+2021-12-10T10:48:26.450-0500 [INFO]  Testing if Service Principal / Client Certificate is applicable for Authentication..
+2021-12-10T10:48:26.451-0500 [INFO]  Testing if Multi Tenant Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T10:48:26.451-0500 [INFO]  Testing if Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T10:48:26.451-0500 [INFO]  Testing if Managed Service Identity is applicable for Authentication..
+2021-12-10T10:48:26.451-0500 [INFO]  Testing if Obtaining a Multi-tenant token from the Azure CLI is applicable for Authentication..
+2021-12-10T10:48:26.451-0500 [INFO]  Testing if Obtaining a token from the Azure CLI is applicable for Authentication..
+2021-12-10T10:48:26.451-0500 [INFO]  Using Obtaining a token from the Azure CLI for Authentication
+2021-12-10T10:48:29.154-0500 [INFO]  Getting OAuth config for endpoint https://login.microsoftonline.com/ with  tenant 72f988bf-86f1-41af-91ab-2d7cd011db47
+2021-12-10T10:48:31.379-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-12-10T10:48:31.881-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-12-10T10:48:44.619-0500 [INFO]  Terraform version: 1.0.11
+2021-12-10T10:48:44.619-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-10T10:48:44.620-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "plan"}
+2021-12-10T10:48:44.628-0500 [INFO]  CLI command args: []string{"plan"}
+2021-12-10T10:48:44.630-0500 [INFO]  Testing if Service Principal / Client Certificate is applicable for Authentication..
+2021-12-10T10:48:44.630-0500 [INFO]  Testing if Multi Tenant Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T10:48:44.630-0500 [INFO]  Testing if Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T10:48:44.630-0500 [INFO]  Testing if Managed Service Identity is applicable for Authentication..
+2021-12-10T10:48:44.630-0500 [INFO]  Testing if Obtaining a Multi-tenant token from the Azure CLI is applicable for Authentication..
+2021-12-10T10:48:44.630-0500 [INFO]  Testing if Obtaining a token from the Azure CLI is applicable for Authentication..
+2021-12-10T10:48:44.630-0500 [INFO]  Using Obtaining a token from the Azure CLI for Authentication
+2021-12-10T10:48:46.387-0500 [INFO]  Getting OAuth config for endpoint https://login.microsoftonline.com/ with  tenant 72f988bf-86f1-41af-91ab-2d7cd011db47
+2021-12-10T10:48:48.632-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-12-10T10:48:48.633-0500 [INFO]  backend/local: starting Plan operation
+2021-12-10T10:48:49.232-0500 [INFO]  terraform: building graph: GraphTypeValidate
+2021-12-10T10:48:49.234-0500 [INFO]  backend/local: plan calling Plan
+2021-12-10T10:48:49.234-0500 [INFO]  terraform: building graph: GraphTypePlan
+2021-12-10T10:48:49.236-0500 [INFO]  backend/local: plan operation completed
+2021-12-10T10:50:25.520-0500 [INFO]  Terraform version: 1.0.11
+2021-12-10T10:50:25.521-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-10T10:50:25.521-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "plan", "target.tf"}
+2021-12-10T10:50:25.530-0500 [INFO]  CLI command args: []string{"plan", "target.tf"}
+2021-12-10T10:50:55.419-0500 [INFO]  Terraform version: 1.0.11
+2021-12-10T10:50:55.420-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-10T10:50:55.420-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "plan", "-out", "target.tf"}
+2021-12-10T10:50:55.427-0500 [INFO]  CLI command args: []string{"plan", "-out", "target.tf"}
+2021-12-10T10:50:55.430-0500 [INFO]  Testing if Service Principal / Client Certificate is applicable for Authentication..
+2021-12-10T10:50:55.430-0500 [INFO]  Testing if Multi Tenant Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T10:50:55.430-0500 [INFO]  Testing if Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T10:50:55.430-0500 [INFO]  Testing if Managed Service Identity is applicable for Authentication..
+2021-12-10T10:50:55.430-0500 [INFO]  Testing if Obtaining a Multi-tenant token from the Azure CLI is applicable for Authentication..
+2021-12-10T10:50:55.430-0500 [INFO]  Testing if Obtaining a token from the Azure CLI is applicable for Authentication..
+2021-12-10T10:50:55.430-0500 [INFO]  Using Obtaining a token from the Azure CLI for Authentication
+2021-12-10T10:50:58.667-0500 [INFO]  Getting OAuth config for endpoint https://login.microsoftonline.com/ with  tenant 72f988bf-86f1-41af-91ab-2d7cd011db47
+2021-12-10T10:51:01.199-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-12-10T10:51:01.200-0500 [INFO]  backend/local: starting Plan operation
+2021-12-10T10:51:01.885-0500 [INFO]  terraform: building graph: GraphTypeValidate
+2021-12-10T10:51:01.886-0500 [INFO]  backend/local: plan calling Plan
+2021-12-10T10:51:01.887-0500 [INFO]  terraform: building graph: GraphTypePlan
+2021-12-10T10:51:01.887-0500 [INFO]  backend/local: plan operation completed
+2021-12-10T10:51:01.887-0500 [INFO]  backend/local: writing plan output to: target.tf
+2021-12-10T10:53:25.003-0500 [INFO]  Terraform version: 1.0.11
+2021-12-10T10:53:25.004-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-10T10:53:25.004-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "apply", "target.tf"}
+2021-12-10T10:53:25.011-0500 [INFO]  CLI command args: []string{"apply", "target.tf"}
+2021-12-10T10:53:25.013-0500 [INFO]  Testing if Service Principal / Client Certificate is applicable for Authentication..
+2021-12-10T10:53:25.013-0500 [INFO]  Testing if Multi Tenant Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T10:53:25.013-0500 [INFO]  Testing if Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T10:53:25.013-0500 [INFO]  Testing if Managed Service Identity is applicable for Authentication..
+2021-12-10T10:53:25.013-0500 [INFO]  Testing if Obtaining a Multi-tenant token from the Azure CLI is applicable for Authentication..
+2021-12-10T10:53:25.013-0500 [INFO]  Testing if Obtaining a token from the Azure CLI is applicable for Authentication..
+2021-12-10T10:53:25.013-0500 [INFO]  Using Obtaining a token from the Azure CLI for Authentication
+2021-12-10T10:53:27.522-0500 [INFO]  Getting OAuth config for endpoint https://login.microsoftonline.com/ with  tenant 72f988bf-86f1-41af-91ab-2d7cd011db47
+2021-12-10T10:53:29.603-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-12-10T10:53:29.604-0500 [INFO]  backend/local: starting Apply operation
+2021-12-10T10:53:30.166-0500 [INFO]  backend/local: apply calling Apply
+2021-12-10T10:53:30.166-0500 [INFO]  terraform: building graph: GraphTypeApply
+2021-12-10T10:53:51.789-0500 [INFO]  Terraform version: 1.0.11
+2021-12-10T10:53:51.791-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-10T10:53:51.791-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "state", "--help"}
+2021-12-10T10:53:51.807-0500 [INFO]  CLI command args: []string{"state", "--help"}
+2021-12-10T10:54:03.595-0500 [INFO]  Terraform version: 1.0.11
+2021-12-10T10:54:03.596-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-10T10:54:03.596-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "state", "rm"}
+2021-12-10T10:54:03.604-0500 [INFO]  CLI command args: []string{"state", "rm"}
+2021-12-10T10:54:21.380-0500 [INFO]  Terraform version: 1.0.11
+2021-12-10T10:54:21.381-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-10T10:54:21.381-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "state", "--help"}
+2021-12-10T10:54:21.394-0500 [INFO]  CLI command args: []string{"state", "--help"}
+2021-12-10T10:54:34.696-0500 [INFO]  Terraform version: 1.0.11
+2021-12-10T10:54:34.697-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-10T10:54:34.697-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "state", "list"}
+2021-12-10T10:54:34.711-0500 [INFO]  CLI command args: []string{"state", "list"}
+2021-12-10T10:58:49.882-0500 [INFO]  Terraform version: 1.0.11
+2021-12-10T10:58:49.883-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-10T10:58:49.883-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "init"}
+2021-12-10T10:58:49.899-0500 [INFO]  CLI command args: []string{"init"}
+2021-12-10T10:58:49.961-0500 [INFO]  Testing if Service Principal / Client Certificate is applicable for Authentication..
+2021-12-10T10:58:49.961-0500 [INFO]  Testing if Multi Tenant Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T10:58:49.961-0500 [INFO]  Testing if Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T10:58:49.961-0500 [INFO]  Testing if Managed Service Identity is applicable for Authentication..
+2021-12-10T10:58:49.962-0500 [INFO]  Testing if Obtaining a Multi-tenant token from the Azure CLI is applicable for Authentication..
+2021-12-10T10:58:49.962-0500 [INFO]  Testing if Obtaining a token from the Azure CLI is applicable for Authentication..
+2021-12-10T10:58:49.962-0500 [INFO]  Using Obtaining a token from the Azure CLI for Authentication
+2021-12-10T10:58:52.664-0500 [INFO]  Getting OAuth config for endpoint https://login.microsoftonline.com/ with  tenant 72f988bf-86f1-41af-91ab-2d7cd011db47
+2021-12-10T10:58:58.238-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-12-10T10:59:16.844-0500 [INFO]  Terraform version: 1.0.11
+2021-12-10T10:59:16.845-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-10T10:59:16.845-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "plan"}
+2021-12-10T10:59:16.856-0500 [INFO]  CLI command args: []string{"plan"}
+2021-12-10T10:59:16.864-0500 [INFO]  Testing if Service Principal / Client Certificate is applicable for Authentication..
+2021-12-10T10:59:16.864-0500 [INFO]  Testing if Multi Tenant Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T10:59:16.864-0500 [INFO]  Testing if Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T10:59:16.864-0500 [INFO]  Testing if Managed Service Identity is applicable for Authentication..
+2021-12-10T10:59:16.864-0500 [INFO]  Testing if Obtaining a Multi-tenant token from the Azure CLI is applicable for Authentication..
+2021-12-10T10:59:16.864-0500 [INFO]  Testing if Obtaining a token from the Azure CLI is applicable for Authentication..
+2021-12-10T10:59:16.864-0500 [INFO]  Using Obtaining a token from the Azure CLI for Authentication
+2021-12-10T10:59:19.278-0500 [INFO]  Getting OAuth config for endpoint https://login.microsoftonline.com/ with  tenant 72f988bf-86f1-41af-91ab-2d7cd011db47
+2021-12-10T10:59:22.269-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-12-10T10:59:22.284-0500 [INFO]  backend/local: starting Plan operation
+2021-12-10T10:59:22.934-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T10:59:23.397-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T10:59:23.396-0500
+2021-12-10T10:59:23.590-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T10:59:23.803-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T10:59:23.802-0500
+2021-12-10T10:59:23.900-0500 [INFO]  terraform: building graph: GraphTypeValidate
+2021-12-10T10:59:23.905-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T10:59:24.111-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T10:59:24.110-0500
+2021-12-10T10:59:24.189-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T10:59:24.325-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T10:59:24.325-0500
+2021-12-10T11:04:30.405-0500 [INFO]  Terraform version: 1.0.11
+2021-12-10T11:04:30.406-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-10T11:04:30.406-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "plan"}
+2021-12-10T11:04:30.415-0500 [INFO]  CLI command args: []string{"plan"}
+2021-12-10T11:04:30.419-0500 [INFO]  Testing if Service Principal / Client Certificate is applicable for Authentication..
+2021-12-10T11:04:30.419-0500 [INFO]  Testing if Multi Tenant Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T11:04:30.419-0500 [INFO]  Testing if Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T11:04:30.419-0500 [INFO]  Testing if Managed Service Identity is applicable for Authentication..
+2021-12-10T11:04:30.419-0500 [INFO]  Testing if Obtaining a Multi-tenant token from the Azure CLI is applicable for Authentication..
+2021-12-10T11:04:30.419-0500 [INFO]  Testing if Obtaining a token from the Azure CLI is applicable for Authentication..
+2021-12-10T11:04:30.419-0500 [INFO]  Using Obtaining a token from the Azure CLI for Authentication
+2021-12-10T11:04:32.996-0500 [INFO]  Getting OAuth config for endpoint https://login.microsoftonline.com/ with  tenant 72f988bf-86f1-41af-91ab-2d7cd011db47
+2021-12-10T11:04:35.047-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-12-10T11:04:35.048-0500 [INFO]  backend/local: starting Plan operation
+2021-12-10T11:04:35.675-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:04:35.959-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:04:35.959-0500
+2021-12-10T11:04:36.085-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:04:36.221-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:04:36.220-0500
+2021-12-10T11:04:36.302-0500 [INFO]  terraform: building graph: GraphTypeValidate
+2021-12-10T11:04:36.306-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:04:36.433-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:04:36.432-0500
+2021-12-10T11:04:36.508-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:04:36.654-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:04:36.653-0500
+2021-12-10T11:07:15.272-0500 [INFO]  Terraform version: 1.0.11
+2021-12-10T11:07:15.273-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-10T11:07:15.273-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "plan", "-out", "target.tf"}
+2021-12-10T11:07:15.280-0500 [INFO]  CLI command args: []string{"plan", "-out", "target.tf"}
+2021-12-10T11:07:15.284-0500 [INFO]  Testing if Service Principal / Client Certificate is applicable for Authentication..
+2021-12-10T11:07:15.284-0500 [INFO]  Testing if Multi Tenant Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T11:07:15.284-0500 [INFO]  Testing if Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T11:07:15.284-0500 [INFO]  Testing if Managed Service Identity is applicable for Authentication..
+2021-12-10T11:07:15.284-0500 [INFO]  Testing if Obtaining a Multi-tenant token from the Azure CLI is applicable for Authentication..
+2021-12-10T11:07:15.284-0500 [INFO]  Testing if Obtaining a token from the Azure CLI is applicable for Authentication..
+2021-12-10T11:07:15.284-0500 [INFO]  Using Obtaining a token from the Azure CLI for Authentication
+2021-12-10T11:07:17.133-0500 [INFO]  Getting OAuth config for endpoint https://login.microsoftonline.com/ with  tenant 72f988bf-86f1-41af-91ab-2d7cd011db47
+2021-12-10T11:07:19.456-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-12-10T11:07:19.456-0500 [INFO]  backend/local: starting Plan operation
+2021-12-10T11:07:20.144-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:07:20.445-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:07:20.445-0500
+2021-12-10T11:07:20.574-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:07:20.707-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:07:20.707-0500
+2021-12-10T11:07:20.790-0500 [INFO]  terraform: building graph: GraphTypeValidate
+2021-12-10T11:07:20.794-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:07:20.912-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:07:20.912-0500
+2021-12-10T11:07:20.985-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:07:21.126-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:07:21.125-0500
+2021-12-10T11:13:13.040-0500 [INFO]  Terraform version: 1.0.11
+2021-12-10T11:13:13.041-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-10T11:13:13.041-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "plan", "-out", "target.tf"}
+2021-12-10T11:13:13.047-0500 [INFO]  CLI command args: []string{"plan", "-out", "target.tf"}
+2021-12-10T11:13:13.064-0500 [INFO]  Testing if Service Principal / Client Certificate is applicable for Authentication..
+2021-12-10T11:13:13.064-0500 [INFO]  Testing if Multi Tenant Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T11:13:13.064-0500 [INFO]  Testing if Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T11:13:13.064-0500 [INFO]  Testing if Managed Service Identity is applicable for Authentication..
+2021-12-10T11:13:13.064-0500 [INFO]  Testing if Obtaining a Multi-tenant token from the Azure CLI is applicable for Authentication..
+2021-12-10T11:13:13.064-0500 [INFO]  Testing if Obtaining a token from the Azure CLI is applicable for Authentication..
+2021-12-10T11:13:13.064-0500 [INFO]  Using Obtaining a token from the Azure CLI for Authentication
+2021-12-10T11:13:15.347-0500 [INFO]  Getting OAuth config for endpoint https://login.microsoftonline.com/ with  tenant 72f988bf-86f1-41af-91ab-2d7cd011db47
+2021-12-10T11:13:17.711-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-12-10T11:13:17.712-0500 [INFO]  backend/local: starting Plan operation
+2021-12-10T11:13:18.237-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:13:18.521-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:13:18.520-0500
+2021-12-10T11:13:18.657-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:13:18.792-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:13:18.791-0500
+2021-12-10T11:13:18.872-0500 [INFO]  terraform: building graph: GraphTypeValidate
+2021-12-10T11:13:18.876-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:13:19.027-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:13:19.027-0500
+2021-12-10T11:13:19.091-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:13:19.202-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:13:19.201-0500
+2021-12-10T11:13:42.522-0500 [INFO]  Terraform version: 1.0.11
+2021-12-10T11:13:42.523-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-10T11:13:42.523-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "plan", "-out", "target.tf"}
+2021-12-10T11:13:42.530-0500 [INFO]  CLI command args: []string{"plan", "-out", "target.tf"}
+2021-12-10T11:13:42.536-0500 [INFO]  Testing if Service Principal / Client Certificate is applicable for Authentication..
+2021-12-10T11:13:42.536-0500 [INFO]  Testing if Multi Tenant Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T11:13:42.536-0500 [INFO]  Testing if Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T11:13:42.536-0500 [INFO]  Testing if Managed Service Identity is applicable for Authentication..
+2021-12-10T11:13:42.536-0500 [INFO]  Testing if Obtaining a Multi-tenant token from the Azure CLI is applicable for Authentication..
+2021-12-10T11:13:42.536-0500 [INFO]  Testing if Obtaining a token from the Azure CLI is applicable for Authentication..
+2021-12-10T11:13:42.536-0500 [INFO]  Using Obtaining a token from the Azure CLI for Authentication
+2021-12-10T11:13:44.865-0500 [INFO]  Getting OAuth config for endpoint https://login.microsoftonline.com/ with  tenant 72f988bf-86f1-41af-91ab-2d7cd011db47
+2021-12-10T11:13:47.363-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-12-10T11:13:47.363-0500 [INFO]  backend/local: starting Plan operation
+2021-12-10T11:13:48.168-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:13:48.467-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:13:48.467-0500
+2021-12-10T11:13:48.592-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:13:48.719-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:13:48.719-0500
+2021-12-10T11:13:48.798-0500 [INFO]  terraform: building graph: GraphTypeValidate
+2021-12-10T11:13:48.802-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:13:48.945-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:13:48.945-0500
+2021-12-10T11:13:49.009-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:13:49.132-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:13:49.131-0500
+2021-12-10T11:15:21.589-0500 [INFO]  Terraform version: 1.0.11
+2021-12-10T11:15:21.590-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-10T11:15:21.590-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "plan", "-out", "target.tf"}
+2021-12-10T11:15:21.644-0500 [INFO]  CLI command args: []string{"plan", "-out", "target.tf"}
+2021-12-10T11:15:21.656-0500 [INFO]  Testing if Service Principal / Client Certificate is applicable for Authentication..
+2021-12-10T11:15:21.656-0500 [INFO]  Testing if Multi Tenant Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T11:15:21.656-0500 [INFO]  Testing if Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T11:15:21.656-0500 [INFO]  Testing if Managed Service Identity is applicable for Authentication..
+2021-12-10T11:15:21.656-0500 [INFO]  Testing if Obtaining a Multi-tenant token from the Azure CLI is applicable for Authentication..
+2021-12-10T11:15:21.657-0500 [INFO]  Testing if Obtaining a token from the Azure CLI is applicable for Authentication..
+2021-12-10T11:15:21.657-0500 [INFO]  Using Obtaining a token from the Azure CLI for Authentication
+2021-12-10T11:15:23.639-0500 [INFO]  Getting OAuth config for endpoint https://login.microsoftonline.com/ with  tenant 72f988bf-86f1-41af-91ab-2d7cd011db47
+2021-12-10T11:15:26.066-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-12-10T11:15:26.067-0500 [INFO]  backend/local: starting Plan operation
+2021-12-10T11:15:26.672-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:15:26.985-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:15:26.984-0500
+2021-12-10T11:15:27.109-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:15:27.306-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:15:27.255-0500
+2021-12-10T11:15:27.358-0500 [INFO]  terraform: building graph: GraphTypeValidate
+2021-12-10T11:15:27.362-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:15:27.524-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:15:27.523-0500
+2021-12-10T11:15:27.583-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:15:27.687-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:15:27.687-0500
+2021-12-10T11:15:27.880-0500 [INFO]  backend/local: plan calling Plan
+2021-12-10T11:15:27.880-0500 [INFO]  terraform: building graph: GraphTypePlan
+2021-12-10T11:15:27.883-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:15:28.052-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:15:28.051-0500
+2021-12-10T11:15:28.124-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T11:15:28.271-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T11:15:28.270-0500
+2021-12-10T11:15:28.334-0500 [WARN]  Provider "registry.terraform.io/hashicorp/random" produced an invalid plan for random_string.rnd, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .min_numeric: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .min_lower: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .min_special: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .min_upper: planned value cty.NumberIntVal(0) for a non-computed attribute
+2021-12-10T11:15:28.422-0500 [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/hashicorp/azurerm\"]" changed the config value, but that value is unused
+2021-12-10T11:15:46.981-0500 [INFO]  ReferenceTransformer: reference not found: "var.region"
+2021-12-10T11:15:46.981-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-10T11:15:46.981-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-10T11:15:46.981-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-10T11:15:46.981-0500 [INFO]  ReferenceTransformer: reference not found: "var.tags"
+2021-12-10T11:15:46.985-0500 [INFO]  ReferenceTransformer: reference not found: "var.tags"
+2021-12-10T11:15:46.985-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-10T11:15:46.985-0500 [INFO]  ReferenceTransformer: reference not found: "local.rnd_string"
+2021-12-10T11:15:46.985-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-10T11:15:46.986-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-10T11:15:46.986-0500 [INFO]  ReferenceTransformer: reference not found: "var.rsv_sku"
+2021-12-10T11:15:46.986-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-10T11:15:46.986-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-10T11:15:46.986-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-10T11:15:46.986-0500 [INFO]  ReferenceTransformer: reference not found: "var.vnt"
+2021-12-10T11:15:46.986-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-10T11:15:46.986-0500 [INFO]  ReferenceTransformer: reference not found: "var.vnt"
+2021-12-10T11:15:46.987-0500 [INFO]  ReferenceTransformer: reference not found: "var.kvt_sku"
+2021-12-10T11:15:46.987-0500 [INFO]  ReferenceTransformer: reference not found: "var.kvt_retention_days"
+2021-12-10T11:15:46.987-0500 [INFO]  ReferenceTransformer: reference not found: "var.tenant_id"
+2021-12-10T11:15:46.987-0500 [INFO]  ReferenceTransformer: reference not found: "var.tags"
+2021-12-10T11:15:46.987-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-10T11:15:46.987-0500 [INFO]  ReferenceTransformer: reference not found: "local.rnd_string"
+2021-12-10T11:15:46.987-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-10T11:15:46.987-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-10T11:15:46.987-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-10T11:15:46.987-0500 [INFO]  ReferenceTransformer: reference not found: "local.rnd_string"
+2021-12-10T11:15:46.987-0500 [INFO]  ReferenceTransformer: reference not found: "var.tags"
+2021-12-10T11:15:46.987-0500 [INFO]  ReferenceTransformer: reference not found: "var.sta"
+2021-12-10T11:15:46.987-0500 [INFO]  ReferenceTransformer: reference not found: "var.sta"
+2021-12-10T11:15:46.990-0500 [WARN]  Provider "registry.terraform.io/hashicorp/azurerm" produced an invalid plan for azurerm_virtual_network.vnt, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .vm_protection_enabled: planned value cty.False for a non-computed attribute
+2021-12-10T11:15:46.992-0500 [WARN]  Provider "registry.terraform.io/hashicorp/azurerm" produced an invalid plan for azurerm_key_vault.kvt, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .network_acls: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2021-12-10T11:15:46.996-0500 [WARN]  Provider "registry.terraform.io/hashicorp/azurerm" produced an invalid plan for azurerm_storage_account.sta, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .account_kind: planned value cty.StringVal("StorageV2") for a non-computed attribute
+      - .enable_https_traffic_only: planned value cty.True for a non-computed attribute
+      - .min_tls_version: planned value cty.StringVal("TLS1_0") for a non-computed attribute
+      - .allow_blob_public_access: planned value cty.False for a non-computed attribute
+      - .is_hns_enabled: planned value cty.False for a non-computed attribute
+      - .identity: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .network_rules: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .queue_properties: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .blob_properties: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2021-12-10T11:15:47.012-0500 [INFO]  backend/local: plan operation completed
+2021-12-10T11:15:47.012-0500 [INFO]  backend/local: writing plan output to: target.tf
+2021-12-10T15:23:36.312-0500 [INFO]  Terraform version: 1.0.11
+2021-12-10T15:23:36.313-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-10T15:23:36.313-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "plan", "-out", "target.tf"}
+2021-12-10T15:23:36.320-0500 [INFO]  CLI command args: []string{"plan", "-out", "target.tf"}
+2021-12-10T15:23:36.340-0500 [INFO]  Testing if Service Principal / Client Certificate is applicable for Authentication..
+2021-12-10T15:23:36.340-0500 [INFO]  Testing if Multi Tenant Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T15:23:36.340-0500 [INFO]  Testing if Service Principal / Client Secret is applicable for Authentication..
+2021-12-10T15:23:36.340-0500 [INFO]  Testing if Managed Service Identity is applicable for Authentication..
+2021-12-10T15:23:36.340-0500 [INFO]  Testing if Obtaining a Multi-tenant token from the Azure CLI is applicable for Authentication..
+2021-12-10T15:23:36.340-0500 [INFO]  Testing if Obtaining a token from the Azure CLI is applicable for Authentication..
+2021-12-10T15:23:36.340-0500 [INFO]  Using Obtaining a token from the Azure CLI for Authentication
+2021-12-10T15:23:38.451-0500 [INFO]  Getting OAuth config for endpoint https://login.microsoftonline.com/ with  tenant 72f988bf-86f1-41af-91ab-2d7cd011db47
+2021-12-10T15:23:41.742-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-12-10T15:23:41.749-0500 [INFO]  backend/local: starting Plan operation
+2021-12-10T15:23:42.683-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T15:23:43.033-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T15:23:43.032-0500
+2021-12-10T15:23:43.228-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T15:23:43.404-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T15:23:43.403-0500
+2021-12-10T15:23:43.523-0500 [INFO]  terraform: building graph: GraphTypeValidate
+2021-12-10T15:23:43.526-0500 [INFO]  ReferenceTransformer: reference not found: "var.res_num"
+2021-12-10T15:23:43.526-0500 [INFO]  ReferenceTransformer: reference not found: "var.res_num"
+2021-12-10T15:23:43.526-0500 [INFO]  ReferenceTransformer: reference not found: "var.res_num"
+2021-12-10T15:23:43.526-0500 [INFO]  ReferenceTransformer: reference not found: "var.res_num"
+2021-12-10T15:23:43.527-0500 [INFO]  ReferenceTransformer: reference not found: "var.res_num"
+2021-12-10T15:23:43.527-0500 [INFO]  ReferenceTransformer: reference not found: "var.res_num"
+2021-12-10T15:23:43.531-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T15:23:43.715-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T15:23:43.713-0500
+2021-12-10T15:23:43.840-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-10T15:23:44.024-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-10T15:23:44.024-0500
+2021-12-11T08:28:29.102-0500 [INFO]  Terraform version: 1.0.11
+2021-12-11T08:28:29.103-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-11T08:28:29.103-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "plan", "-out", "target.tf"}
+2021-12-11T08:28:29.111-0500 [INFO]  CLI command args: []string{"plan", "-out", "target.tf"}
+2021-12-11T08:28:29.139-0500 [INFO]  Testing if Service Principal / Client Certificate is applicable for Authentication..
+2021-12-11T08:28:29.139-0500 [INFO]  Testing if Multi Tenant Service Principal / Client Secret is applicable for Authentication..
+2021-12-11T08:28:29.139-0500 [INFO]  Testing if Service Principal / Client Secret is applicable for Authentication..
+2021-12-11T08:28:29.139-0500 [INFO]  Testing if Managed Service Identity is applicable for Authentication..
+2021-12-11T08:28:29.139-0500 [INFO]  Testing if Obtaining a Multi-tenant token from the Azure CLI is applicable for Authentication..
+2021-12-11T08:28:29.139-0500 [INFO]  Testing if Obtaining a token from the Azure CLI is applicable for Authentication..
+2021-12-11T08:28:29.139-0500 [INFO]  Using Obtaining a token from the Azure CLI for Authentication
+2021-12-11T08:28:31.068-0500 [INFO]  Getting OAuth config for endpoint https://login.microsoftonline.com/ with  tenant 72f988bf-86f1-41af-91ab-2d7cd011db47
+2021-12-11T08:28:35.165-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-12-11T08:28:35.174-0500 [INFO]  backend/local: starting Plan operation
+2021-12-11T08:28:36.028-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:28:36.473-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:28:36.472-0500
+2021-12-11T08:28:36.670-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:28:36.821-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:28:36.820-0500
+2021-12-11T08:28:36.922-0500 [INFO]  terraform: building graph: GraphTypeValidate
+2021-12-11T08:28:36.925-0500 [INFO]  ReferenceTransformer: reference not found: "var.res_num"
+2021-12-11T08:28:36.925-0500 [INFO]  ReferenceTransformer: reference not found: "var.res_num"
+2021-12-11T08:28:36.925-0500 [INFO]  ReferenceTransformer: reference not found: "var.res_num"
+2021-12-11T08:28:36.926-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:28:37.204-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:28:37.195-0500
+2021-12-11T08:28:37.293-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:28:37.479-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:28:37.478-0500
+2021-12-11T08:29:27.771-0500 [INFO]  Terraform version: 1.0.11
+2021-12-11T08:29:27.772-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-11T08:29:27.772-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "plan", "-out", "target.tf"}
+2021-12-11T08:29:27.778-0500 [INFO]  CLI command args: []string{"plan", "-out", "target.tf"}
+2021-12-11T08:29:27.783-0500 [INFO]  Testing if Service Principal / Client Certificate is applicable for Authentication..
+2021-12-11T08:29:27.783-0500 [INFO]  Testing if Multi Tenant Service Principal / Client Secret is applicable for Authentication..
+2021-12-11T08:29:27.783-0500 [INFO]  Testing if Service Principal / Client Secret is applicable for Authentication..
+2021-12-11T08:29:27.783-0500 [INFO]  Testing if Managed Service Identity is applicable for Authentication..
+2021-12-11T08:29:27.783-0500 [INFO]  Testing if Obtaining a Multi-tenant token from the Azure CLI is applicable for Authentication..
+2021-12-11T08:29:27.783-0500 [INFO]  Testing if Obtaining a token from the Azure CLI is applicable for Authentication..
+2021-12-11T08:29:27.783-0500 [INFO]  Using Obtaining a token from the Azure CLI for Authentication
+2021-12-11T08:29:29.498-0500 [INFO]  Getting OAuth config for endpoint https://login.microsoftonline.com/ with  tenant 72f988bf-86f1-41af-91ab-2d7cd011db47
+2021-12-11T08:29:31.785-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-12-11T08:29:31.786-0500 [INFO]  backend/local: starting Plan operation
+2021-12-11T08:29:32.343-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:29:32.625-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:29:32.625-0500
+2021-12-11T08:29:32.755-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:29:32.898-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:29:32.898-0500
+2021-12-11T08:29:32.982-0500 [INFO]  terraform: building graph: GraphTypeValidate
+2021-12-11T08:29:32.984-0500 [INFO]  ReferenceTransformer: reference not found: "var.res_num"
+2021-12-11T08:29:32.984-0500 [INFO]  ReferenceTransformer: reference not found: "var.res_num"
+2021-12-11T08:29:32.984-0500 [INFO]  ReferenceTransformer: reference not found: "var.res_num"
+2021-12-11T08:29:32.986-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:29:33.145-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:29:33.144-0500
+2021-12-11T08:29:33.209-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:29:33.364-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:29:33.363-0500
+2021-12-11T08:30:07.951-0500 [INFO]  Terraform version: 1.0.11
+2021-12-11T08:30:07.952-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-11T08:30:07.952-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "plan", "-out", "target.tf"}
+2021-12-11T08:30:07.959-0500 [INFO]  CLI command args: []string{"plan", "-out", "target.tf"}
+2021-12-11T08:30:07.962-0500 [INFO]  Testing if Service Principal / Client Certificate is applicable for Authentication..
+2021-12-11T08:30:07.962-0500 [INFO]  Testing if Multi Tenant Service Principal / Client Secret is applicable for Authentication..
+2021-12-11T08:30:07.962-0500 [INFO]  Testing if Service Principal / Client Secret is applicable for Authentication..
+2021-12-11T08:30:07.962-0500 [INFO]  Testing if Managed Service Identity is applicable for Authentication..
+2021-12-11T08:30:07.962-0500 [INFO]  Testing if Obtaining a Multi-tenant token from the Azure CLI is applicable for Authentication..
+2021-12-11T08:30:07.962-0500 [INFO]  Testing if Obtaining a token from the Azure CLI is applicable for Authentication..
+2021-12-11T08:30:07.962-0500 [INFO]  Using Obtaining a token from the Azure CLI for Authentication
+2021-12-11T08:30:09.598-0500 [INFO]  Getting OAuth config for endpoint https://login.microsoftonline.com/ with  tenant 72f988bf-86f1-41af-91ab-2d7cd011db47
+2021-12-11T08:30:12.001-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-12-11T08:30:12.001-0500 [INFO]  backend/local: starting Plan operation
+2021-12-11T08:30:12.576-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:30:12.881-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:30:12.879-0500
+2021-12-11T08:30:13.016-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:30:13.152-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:30:13.151-0500
+2021-12-11T08:30:13.230-0500 [INFO]  terraform: building graph: GraphTypeValidate
+2021-12-11T08:30:13.235-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:30:13.386-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:30:13.385-0500
+2021-12-11T08:30:13.449-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:30:13.596-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:30:13.595-0500
+2021-12-11T08:36:01.881-0500 [INFO]  Terraform version: 1.0.11
+2021-12-11T08:36:01.881-0500 [INFO]  Go runtime version: go1.16.4
+2021-12-11T08:36:01.881-0500 [INFO]  CLI args: []string{"C:\\WINDOWS\\system32\\terraform.exe", "plan", "-out", "target.tf"}
+2021-12-11T08:36:01.893-0500 [INFO]  CLI command args: []string{"plan", "-out", "target.tf"}
+2021-12-11T08:36:01.920-0500 [INFO]  Testing if Service Principal / Client Certificate is applicable for Authentication..
+2021-12-11T08:36:01.920-0500 [INFO]  Testing if Multi Tenant Service Principal / Client Secret is applicable for Authentication..
+2021-12-11T08:36:01.920-0500 [INFO]  Testing if Service Principal / Client Secret is applicable for Authentication..
+2021-12-11T08:36:01.920-0500 [INFO]  Testing if Managed Service Identity is applicable for Authentication..
+2021-12-11T08:36:01.920-0500 [INFO]  Testing if Obtaining a Multi-tenant token from the Azure CLI is applicable for Authentication..
+2021-12-11T08:36:01.920-0500 [INFO]  Testing if Obtaining a token from the Azure CLI is applicable for Authentication..
+2021-12-11T08:36:01.920-0500 [INFO]  Using Obtaining a token from the Azure CLI for Authentication
+2021-12-11T08:36:04.187-0500 [INFO]  Getting OAuth config for endpoint https://login.microsoftonline.com/ with  tenant 72f988bf-86f1-41af-91ab-2d7cd011db47
+2021-12-11T08:36:07.278-0500 [INFO]  Failed to read plugin lock file .terraform\plugins\windows_amd64\lock.json: open .terraform\plugins\windows_amd64\lock.json: The system cannot find the path specified.
+2021-12-11T08:36:07.290-0500 [INFO]  backend/local: starting Plan operation
+2021-12-11T08:36:07.914-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:36:08.297-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:36:08.297-0500
+2021-12-11T08:36:08.488-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:36:08.665-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:36:08.663-0500
+2021-12-11T08:36:08.758-0500 [INFO]  terraform: building graph: GraphTypeValidate
+2021-12-11T08:36:08.767-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:36:08.962-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:36:08.961-0500
+2021-12-11T08:36:09.021-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:36:09.185-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:36:09.184-0500
+2021-12-11T08:36:09.282-0500 [INFO]  backend/local: plan calling Plan
+2021-12-11T08:36:09.282-0500 [INFO]  terraform: building graph: GraphTypePlan
+2021-12-11T08:36:09.286-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:36:09.467-0500 [INFO]  provider.terraform-provider-azurerm_v2.46.1_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:36:09.466-0500
+2021-12-11T08:36:09.527-0500 [INFO]  provider: configuring client automatic mTLS
+2021-12-11T08:36:09.651-0500 [INFO]  provider.terraform-provider-random_v3.1.0_x5.exe: configuring server automatic mTLS: timestamp=2021-12-11T08:36:09.650-0500
+2021-12-11T08:36:09.727-0500 [WARN]  Provider "registry.terraform.io/hashicorp/random" produced an invalid plan for random_string.rnd, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .min_lower: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .min_numeric: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .min_special: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .min_upper: planned value cty.NumberIntVal(0) for a non-computed attribute
+2021-12-11T08:36:09.816-0500 [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/hashicorp/azurerm\"]" changed the config value, but that value is unused
+2021-12-11T08:36:28.957-0500 [INFO]  ReferenceTransformer: reference not found: "var.region"
+2021-12-11T08:36:28.957-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-11T08:36:28.957-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-11T08:36:28.957-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-11T08:36:28.957-0500 [INFO]  ReferenceTransformer: reference not found: "var.tags"
+2021-12-11T08:36:28.960-0500 [INFO]  ReferenceTransformer: reference not found: "var.vnt"
+2021-12-11T08:36:28.960-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-11T08:36:28.960-0500 [INFO]  ReferenceTransformer: reference not found: "var.vnt"
+2021-12-11T08:36:28.960-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-11T08:36:28.960-0500 [INFO]  ReferenceTransformer: reference not found: "var.vnt"
+2021-12-11T08:36:28.960-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-11T08:36:28.960-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-11T08:36:28.960-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-11T08:36:28.961-0500 [INFO]  ReferenceTransformer: reference not found: "var.tags"
+2021-12-11T08:36:28.961-0500 [INFO]  ReferenceTransformer: reference not found: "var.sta"
+2021-12-11T08:36:28.961-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-11T08:36:28.961-0500 [INFO]  ReferenceTransformer: reference not found: "local.rnd_string"
+2021-12-11T08:36:28.961-0500 [INFO]  ReferenceTransformer: reference not found: "var.sta"
+2021-12-11T08:36:28.961-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-11T08:36:28.961-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-11T08:36:28.961-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-11T08:36:28.961-0500 [INFO]  ReferenceTransformer: reference not found: "var.vnt"
+2021-12-11T08:36:28.961-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-11T08:36:28.961-0500 [INFO]  ReferenceTransformer: reference not found: "var.vnt"
+2021-12-11T08:36:28.962-0500 [INFO]  ReferenceTransformer: reference not found: "var.vnt"
+2021-12-11T08:36:28.962-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-11T08:36:28.962-0500 [INFO]  ReferenceTransformer: reference not found: "var.vnt"
+2021-12-11T08:36:28.962-0500 [INFO]  ReferenceTransformer: reference not found: "var.vnt"
+2021-12-11T08:36:28.962-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-11T08:36:28.962-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-11T08:36:28.962-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-11T08:36:28.962-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-11T08:36:28.962-0500 [INFO]  ReferenceTransformer: reference not found: "var.vnt"
+2021-12-11T08:36:28.962-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-11T08:36:28.962-0500 [INFO]  ReferenceTransformer: reference not found: "var.vnt"
+2021-12-11T08:36:28.962-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-11T08:36:28.962-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-11T08:36:28.962-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-11T08:36:28.962-0500 [INFO]  ReferenceTransformer: reference not found: "var.vnt"
+2021-12-11T08:36:28.962-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-11T08:36:28.963-0500 [WARN]  Provider "registry.terraform.io/hashicorp/azurerm" produced an invalid plan for azurerm_subnet.sql_snt, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .enforce_private_link_service_network_policies: planned value cty.False for a non-computed attribute
+      - .enforce_private_link_endpoint_network_policies: planned value cty.False for a non-computed attribute
+2021-12-11T08:36:28.963-0500 [INFO]  ReferenceTransformer: reference not found: "var.vnt"
+2021-12-11T08:36:28.963-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-11T08:36:28.963-0500 [INFO]  ReferenceTransformer: reference not found: "var.vnt"
+2021-12-11T08:36:28.963-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-11T08:36:28.963-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-11T08:36:28.963-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-11T08:36:28.963-0500 [INFO]  ReferenceTransformer: reference not found: "var.vnt"
+2021-12-11T08:36:28.963-0500 [INFO]  ReferenceTransformer: reference not found: "var.tags"
+2021-12-11T08:36:28.963-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-11T08:36:28.963-0500 [INFO]  ReferenceTransformer: reference not found: "local.rnd_string"
+2021-12-11T08:36:28.963-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-11T08:36:28.963-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-11T08:36:28.963-0500 [INFO]  ReferenceTransformer: reference not found: "var.rsv_sku"
+2021-12-11T08:36:28.964-0500 [INFO]  ReferenceTransformer: reference not found: "var.kvt_retention_days"
+2021-12-11T08:36:28.964-0500 [INFO]  ReferenceTransformer: reference not found: "var.tags"
+2021-12-11T08:36:28.964-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-11T08:36:28.964-0500 [INFO]  ReferenceTransformer: reference not found: "local.rnd_string"
+2021-12-11T08:36:28.964-0500 [INFO]  ReferenceTransformer: reference not found: "var.resource_codes"
+2021-12-11T08:36:28.964-0500 [INFO]  ReferenceTransformer: reference not found: "local.res_num"
+2021-12-11T08:36:28.964-0500 [INFO]  ReferenceTransformer: reference not found: "var.tenant_id"
+2021-12-11T08:36:28.964-0500 [INFO]  ReferenceTransformer: reference not found: "var.kvt_sku"
+2021-12-11T08:36:28.965-0500 [WARN]  Provider "registry.terraform.io/hashicorp/azurerm" produced an invalid plan for azurerm_virtual_network.vnt, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .vm_protection_enabled: planned value cty.False for a non-computed attribute
+2021-12-11T08:36:28.967-0500 [WARN]  Provider "registry.terraform.io/hashicorp/azurerm" produced an invalid plan for azurerm_subnet.dev_snt, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .enforce_private_link_endpoint_network_policies: planned value cty.False for a non-computed attribute
+      - .enforce_private_link_service_network_policies: planned value cty.False for a non-computed attribute
+2021-12-11T08:36:28.967-0500 [WARN]  Provider "registry.terraform.io/hashicorp/azurerm" produced an invalid plan for azurerm_subnet.web_snt, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .enforce_private_link_endpoint_network_policies: planned value cty.False for a non-computed attribute
+      - .enforce_private_link_service_network_policies: planned value cty.False for a non-computed attribute
+2021-12-11T08:36:28.967-0500 [WARN]  Provider "registry.terraform.io/hashicorp/azurerm" produced an invalid plan for azurerm_subnet.bas_snt, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .enforce_private_link_endpoint_network_policies: planned value cty.False for a non-computed attribute
+      - .enforce_private_link_service_network_policies: planned value cty.False for a non-computed attribute
+2021-12-11T08:36:28.967-0500 [WARN]  Provider "registry.terraform.io/hashicorp/azurerm" produced an invalid plan for azurerm_key_vault.kvt, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .network_acls: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2021-12-11T08:36:28.970-0500 [WARN]  Provider "registry.terraform.io/hashicorp/azurerm" produced an invalid plan for azurerm_storage_account.sta, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .allow_blob_public_access: planned value cty.False for a non-computed attribute
+      - .min_tls_version: planned value cty.StringVal("TLS1_0") for a non-computed attribute
+      - .enable_https_traffic_only: planned value cty.True for a non-computed attribute
+      - .account_kind: planned value cty.StringVal("StorageV2") for a non-computed attribute
+      - .is_hns_enabled: planned value cty.False for a non-computed attribute
+      - .network_rules: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .queue_properties: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .blob_properties: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .identity: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2021-12-11T08:36:29.011-0500 [INFO]  backend/local: plan operation completed
+2021-12-11T08:36:29.011-0500 [INFO]  backend/local: writing plan output to: target.tf

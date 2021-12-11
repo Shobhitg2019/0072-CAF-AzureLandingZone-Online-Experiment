@@ -45,6 +45,7 @@ We grant You a nonexclusive, royalty-free right to use and modify the Sample Cod
 This posting is provided "AS IS" with no warranties, and confers no rights.
 
 .LINK
+1. https://stackoverflow.com/questions/957928/is-there-a-way-to-get-the-git-root-directory-in-one-command
 
 .COMPONENT
 File system
