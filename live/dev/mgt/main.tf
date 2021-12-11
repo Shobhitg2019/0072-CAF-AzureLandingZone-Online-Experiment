@@ -2,6 +2,7 @@
 # 1. https://stackoverflow.com/questions/67012478/locals-tf-file-parsing-jsonencode-body
 
 # Azure Provider source and version being used
+/*
 terraform {
   required_providers {
     azurerm = {
@@ -31,12 +32,16 @@ resource "random_string" "rnd" {
   lower = false
   upper = false
 }
+*/
 
 # local parameters
+/*
 locals {
   rnd_string = random_string.rnd.result
   res_num = tostring(var.resource_number)
 }
+*/
+
 # mgt
 # 01. resource group 
 resource "azurerm_resource_group" "rgp" {
