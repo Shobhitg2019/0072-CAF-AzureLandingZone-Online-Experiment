@@ -91,6 +91,60 @@ module "net" {
   tags = {
     "environment" = "dev"
   }
+
+  nsg_objects = [
+    {
+      name = "web-nsg-${var.resource_number}",
+      rule = {
+        http = {
+          name = "http"
+          priority = 100
+          direction = "Inbound"
+          access = "Allow"
+          protocol = "Tcp"
+          source_port_range = "*"
+          destination_port_range = "80"
+          source_address_prefix = "Internet"
+          destination_address_prefix = module.net.web_snt_prefix[0]
+        }
+      },
+      tags = var.tags
+    },
+    {
+      name = "sql-nsg-${var.resource_number}",
+      rule = {
+        http = {
+          name = "sql"
+          priority = 110
+          direction = "Inbound"
+          access = "Allow"
+          protocol = "Tcp"
+          source_port_range = "*"
+          destination_port_range = "1443"
+          source_address_prefixes = [module.net.web_snt_prefix[0],module.net.dev_snt_prefix[0]]
+          destination_address_prefix = module.net.sql_snt_prefix[0]
+        }
+      },
+      tags = var.tags
+    },
+    {
+      name = "dev-nsg-${var.resource_number}",
+      rule = {
+        http = {
+          name = "dev"
+          priority = 110
+          direction = "Inbound"
+          access = "Allow"
+          protocol = "Tcp"
+          source_port_range = "*"
+          destination_port_range = "3389"
+          source_address_prefixes = [module.net.web_snt_prefix[0],module.net.sql_snt_prefix[0]]
+          destination_address_prefix = module.net.sql_snt_prefix[0]
+        }
+      },
+      tags = var.tags
+    }
+  ]
 }
 
 

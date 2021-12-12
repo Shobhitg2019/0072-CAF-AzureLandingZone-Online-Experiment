@@ -38,4 +38,14 @@ resource "azurerm_subnet" "bas_snt" {
 }
 
 # 08. nsgs 
+
+resource "azurerm_network_security_group" "nsg" {
+  count = length(var.nsg_objects)
+  name = var.nsg_objects[count.index].name 
+  location = var.rgp_location
+  resource_group_name = var.rgp_name
+  security_rule = var.nsg_objects[count.index].rule
+  tags = var.nsg_objects[count.index].tags 
+}
+
 # 09. bastion
