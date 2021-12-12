@@ -59,6 +59,12 @@ Cloud Engineer
 Create a directory structure to support Terraform workflows
 #>
 
+<#
+TASK-ITEMS:
+001. Set $env:TF_DATA_DIR = .\live\glb
+002. Change the live directory name to env
+#>
+
 [CmdletBinding()]
 param (
 		# Log directory
