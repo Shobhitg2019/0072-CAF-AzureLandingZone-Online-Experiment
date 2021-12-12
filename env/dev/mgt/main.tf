@@ -54,7 +54,7 @@ resource "azurerm_recovery_services_vault" "rsv" {
 
 # net
 module "net" {
-  source          = "../../../modules/modules/net"
+  source          = "../net"
   resource_number = var.resource_number
   rgp_location  = azurerm_resource_group.rgp.location
   rgp_name      = azurerm_resource_group.rgp.name

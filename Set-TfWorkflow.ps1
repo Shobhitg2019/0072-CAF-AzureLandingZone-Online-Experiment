@@ -61,8 +61,7 @@ Create a directory structure to support Terraform workflows
 
 <#
 TASK-ITEMS:
-001. Set $env:TF_DATA_DIR = .\live\glb
-002. Change the live directory name to env
+001. Add the doc folder and subfolders automatically.
 #>
 
 [CmdletBinding()]
