@@ -428,8 +428,8 @@ else
 	
 	$directories = @{
 		top = "." # Top level directory
-		lve = "live" # Live environments, i.e. dev, stage and production
-		mod = "modules" # Terraform modules
+		lve = "env" # Live environments, i.e. dev, stage and production
+		mod = "mod" # Terraform modules
 		dev = "dev"	# Development
 		stg = "stg"	# Staging
 		prd = "prd"	# Production
