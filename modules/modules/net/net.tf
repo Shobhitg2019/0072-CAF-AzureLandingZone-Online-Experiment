@@ -40,12 +40,31 @@ resource "azurerm_subnet" "bas_snt" {
 # 08. nsgs 
 
 resource "azurerm_network_security_group" "nsg" {
-  count = length(var.nsg_objects)
-  name = var.nsg_objects[count.index].name 
+  count = length(var.nsg_name_list)
+  name = var.nsg_name_list[count.index]
   location = var.rgp_location
   resource_group_name = var.rgp_name
-  security_rule = var.nsg_objects[count.index].rule
-  tags = var.nsg_objects[count.index].tags 
+  tags = var.tags
 }
 
+
+resource "azurerm_network_security_rule" "nsr" {
+  count = length(var.nsg_rules)
+  name = var.nsg_rules[count.index].name 
+  priority = tonumber(var.nsg_rules[count.index].priority)
+  direction = var.nsg_rules[count.index].direction
+  access = var.nsg_rules[count.index].access 
+  protocol = var.nsg_rules[count.index].protocol
+  source_port_range = var.nsg_rules[count.index].source_port_range 
+  destination_port_range = var.nsg_rules[count.index].destination_port_range
+  source_address_prefix = var.nsg_rules[count.index].source_address_prefix
+  destination_address_prefix = var.nsg_rules[count.index].destination_address_prefix
+  resource_group_name = azurerm_network_security_group.nsg[count.index].resource_group_name
+  network_security_group_name = azurerm_network_security_group.nsg[count.index].name 
+}
+resource "azurerm_subnet_network_security_group_association" "sga" {
+  count = length(local.subnet_id_list)
+  subnet_id = local.subnet_id_list[count.index] 
+  network_security_group_id = azurerm_network_security_group.nsg[count.index].id 
+}
 # 09. bastion

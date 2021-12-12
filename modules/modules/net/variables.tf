@@ -43,11 +43,11 @@ variable "tags" {
   description = "Resource tags."
 }
 
-variable "nsg_objects" {
-  type = list(object({
-    name = string 
-    rule = object({})
-    tags = map(string)
-  }))
+variable "nsg_name_list" {
+  type = list(string)
   description = "List of NSGs to provision."
+}
+
+variable "nsg_rules" {
+  type = list(map(string))
 }
