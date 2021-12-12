@@ -275,7 +275,7 @@ function New-TerraformDirectories
 }
 #endregion FUNCTIONs
 
-function Set-TerraformEnvVarsForLogging 
+function Set-EnvironmentVariables
 {
 	[CmdletBinding()]
 	param(
@@ -296,10 +296,20 @@ function Set-TerraformEnvVarsForLogging
 		}
 		$env:TF_LOG = "INFO"
 		$env:TF_LOG_PATH = $tfLogPath
+		$env:TF_DATA_DIR = $tfLogDir
 	}
 	else
 	{
 		Write-Output "Can't find Terraform log directory: $tfLogDir"
+	}
+
+	if (git --version)
+	{
+		$env:gitRoot = Invoke-Command -ScriptBlock { git rev-parse --show-toplevel } 
+	}
+	else
+	{
+		"Unable to set the $env:GitRoot variable because git is not installed. Please install git from: https://git-scm.com/downloads"
 	}
 }
 
