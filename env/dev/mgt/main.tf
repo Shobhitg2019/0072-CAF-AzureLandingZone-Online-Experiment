@@ -61,7 +61,7 @@ module "net" {
   #  series_suffix = "01"
   vnt = {
     addr_space_prefix    = "10.20"
-    addr_space_suffix    = "0/26"
+    addr_space_suffix    = "0/23"
     web_sub_name_prefix  = "web-snt"
     web_sub_range_suffix = "0/28"
     sql_sub_name_prefix  = "sql-snt"
@@ -69,7 +69,7 @@ module "net" {
     dev_sub_name_prefix  = "dev-snt"
     dev_sub_range_suffix = "32/28"
     bas_sub_name         = "AzureBastionSubnet"
-    bas_sub_range_suffix = "48/27"
+    bas_sub_range_suffix = "0/27"
   }
   resource_codes = {
     prefix            = "azr"

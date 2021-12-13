@@ -12,6 +12,9 @@ resource "azurerm_subnet" "web_snt" {
   virtual_network_name = "${var.resource_codes.prefix}-${var.resource_codes.vnet}-${local.rnum}"
   resource_group_name = var.rgp_name
   address_prefixes = ["${var.vnt.addr_space_prefix}.${local.rnum}.${var.vnt.web_sub_range_suffix}"]
+  depends_on = [
+    azurerm_virtual_network.vnt
+  ]
 }
 
 # 06.02 sql 
@@ -20,6 +23,9 @@ resource "azurerm_subnet" "sql_snt" {
   virtual_network_name = "${var.resource_codes.prefix}-${var.resource_codes.vnet}-${local.rnum}"
   resource_group_name = var.rgp_name
   address_prefixes = ["${var.vnt.addr_space_prefix}.${local.rnum}.${var.vnt.sql_sub_range_suffix}"]
+  depends_on = [
+    azurerm_virtual_network.vnt
+  ]
 }
 
 # 06.03 dev 
@@ -28,13 +34,21 @@ resource "azurerm_subnet" "dev_snt" {
   virtual_network_name = "${var.resource_codes.prefix}-${var.resource_codes.vnet}-${local.rnum}"
   resource_group_name = var.rgp_name
   address_prefixes = ["${var.vnt.addr_space_prefix}.${local.rnum}.${var.vnt.dev_sub_range_suffix}"]
+  depends_on = [
+    azurerm_virtual_network.vnt
+  ]
 }
 
 resource "azurerm_subnet" "bas_snt" {
   name = var.vnt.bas_sub_name
   virtual_network_name = "${var.resource_codes.prefix}-${var.resource_codes.vnet}-${local.rnum}"
   resource_group_name = var.rgp_name
-  address_prefixes = ["${var.vnt.addr_space_prefix}.${local.rnum}.${var.vnt.bas_sub_range_suffix}"]
+  # TASK-ITEM: temporarily hard-coding 11 for subnet 3rd octet to avoid CIDR formatting error
+  address_prefixes = ["${var.vnt.addr_space_prefix}.${local.bas3rdOctet}.${var.vnt.bas_sub_range_suffix}"]
+  depends_on = [
+    azurerm_virtual_network.vnt,
+    azurerm_subnet.dev_snt
+  ]
 }
 
 # 08. nsgs 
