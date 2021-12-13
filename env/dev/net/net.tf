@@ -68,5 +68,19 @@ resource "azurerm_subnet_network_security_group_association" "sga" {
   network_security_group_id = azurerm_network_security_group.nsg[count.index].id 
 }
 
+# 09. nics
+
+resource "azurerm_network_interface" "nic" {
+  count = length(var.nics)
+  name = var.nics[count.index].ipconfig.name 
+  location = var.rgp_location 
+  resource_group_name = var.rgp_name 
+  ip_configuration {
+    name = var.nics[count.index].ipconfig.name
+    subnet_id = var.nics[count.index].ipconfig.sub_id
+    private_ip_address_allocation = var.nics[count.index].ipconfig.prv_ip_alloc
+  }
+}
+
 # 09. bastion
 

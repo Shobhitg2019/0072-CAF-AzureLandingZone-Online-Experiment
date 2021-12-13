@@ -56,20 +56,20 @@ resource "azurerm_recovery_services_vault" "rsv" {
 module "net" {
   source          = "../net"
   resource_number = var.resource_number
-  rgp_location  = azurerm_resource_group.rgp.location
-  rgp_name      = azurerm_resource_group.rgp.name
+  rgp_location    = azurerm_resource_group.rgp.location
+  rgp_name        = azurerm_resource_group.rgp.name
   #  series_suffix = "01"
   vnt = {
     addr_space_prefix    = "10.20"
     addr_space_suffix    = "0/26"
     web_sub_name_prefix  = "web-snt"
-    web_sub_range_suffix = "0/29"
+    web_sub_range_suffix = "0/28"
     sql_sub_name_prefix  = "sql-snt"
-    sql_sub_range_suffix = "8/29"
+    sql_sub_range_suffix = "16/28"
     dev_sub_name_prefix  = "dev-snt"
-    dev_sub_range_suffix = "16/29"
+    dev_sub_range_suffix = "32/28"
     bas_sub_name         = "AzureBastionSubnet"
-    bas_sub_range_suffix = "32/27"
+    bas_sub_range_suffix = "48/27"
   }
   resource_codes = {
     prefix            = "azr"
@@ -94,38 +94,38 @@ module "net" {
 
   nsg_rules = [
     {
-      name = "http"
-      priority = "100"
-      direction = "Inbound"
-      access = "Allow"
-      protocol = "Tcp"
-      source_port_range = "*"
-      destination_port_range = "80"
-      source_address_prefix = "Internet"
+      name                       = "http"
+      priority                   = "100"
+      direction                  = "Inbound"
+      access                     = "Allow"
+      protocol                   = "Tcp"
+      source_port_range          = "*"
+      destination_port_range     = "80"
+      source_address_prefix      = "Internet"
       destination_address_prefix = module.net.web_snt_prefix[0]
     },
     {
-      name = "sql"
-      priority = "110"
-      direction = "Inbound"
-      access = "Allow"
-      protocol = "Tcp"
-      source_port_range = "*"
-      destination_port_range = "1443"
-      source_address_prefix = module.net.web_snt_prefix[0]
+      name                       = "sql"
+      priority                   = "110"
+      direction                  = "Inbound"
+      access                     = "Allow"
+      protocol                   = "Tcp"
+      source_port_range          = "*"
+      destination_port_range     = "1443"
+      source_address_prefix      = module.net.web_snt_prefix[0]
       destination_address_prefix = module.net.sql_snt_prefix[0]
     },
     {
-      name = "dev"
-      priority = "120"
-      direction = "Inbound"
-      access = "Allow"
-      protocol = "Tcp"
-      source_port_range = "*"
-      destination_port_range = "3389"
-      source_address_prefix = module.net.sql_snt_prefix[0]
+      name                       = "dev"
+      priority                   = "120"
+      direction                  = "Inbound"
+      access                     = "Allow"
+      protocol                   = "Tcp"
+      source_port_range          = "*"
+      destination_port_range     = "3389"
+      source_address_prefix      = module.net.sql_snt_prefix[0]
       destination_address_prefix = module.net.sql_snt_prefix[0]
-     }
+    }
   ]
 
   nsg_name_list = [
@@ -133,8 +133,42 @@ module "net" {
     "sql-nsg-${var.resource_number}",
     "dev-nsg-${var.resource_number}"
   ]
-}
 
+  nics = [
+    {
+      vm = "dev01"
+      ipconfig = {
+        name         = "${var.resource_codes.prefix}${var.resource_codes.development}${tostring(var.resource_number)}-nic-${var.series_suffix}"
+        sub_id       = module.net.dev_snt_id
+        prv_ip_alloc = "Dynamic"
+      }
+    },
+    {
+      vm = "sql01"
+      ipconfig = {
+        name         = "${var.resource_codes.prefix}${var.resource_codes.sql}${tostring(var.resource_number)}-nic-${var.series_suffix}"
+        sub_id       = module.net.dev_snt_id
+        prv_ip_alloc = "Dynamic"
+      }
+    },
+    {
+      vm = "web01"
+      ipconfig = {
+        name         = "${var.resource_codes.prefix}${var.resource_codes.web}${tostring(var.resource_number)}-nic-01"
+        sub_id       = module.net.dev_snt_id
+        prv_ip_alloc = "Dynamic"
+      }
+    },
+    {
+      vm = "web02"
+      ipconfig = {
+        name         = "${var.resource_codes.prefix}${var.resource_codes.web}${tostring(var.resource_number)}-nic-02"
+        sub_id       = module.net.dev_snt_id
+        prv_ip_alloc = "Dynamic"
+      }
+    }
+  ]
+}
 
 # 05. mgt vm
 

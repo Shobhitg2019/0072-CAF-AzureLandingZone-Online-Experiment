@@ -51,3 +51,11 @@ variable "nsg_name_list" {
 variable "nsg_rules" {
   type = list(map(string))
 }
+
+variable "nics" {
+  type = list(object({
+    vm = string 
+    ipconfig = map(string)
+  }))
+  description = "NIC proprties for all VMs."
+}
