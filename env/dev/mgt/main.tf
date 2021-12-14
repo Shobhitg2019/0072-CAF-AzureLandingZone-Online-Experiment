@@ -87,6 +87,7 @@ module "net" {
     public_ip         = "pip"
     bastion           = "bas"
     availaiblity_set  = "avs"
+    bep               = "bep"
   }
   tags = {
     "environment" = "dev"
@@ -186,6 +187,22 @@ module "net" {
       sku = "Standard"
     }
   ]
+
+  alb = {
+    name = "${var.resource_codes.prefix}-${var.resource_codes.ext_load_balancer}-${local.rnd_string}-${var.resource_number}"
+    sku = "Standard"
+    fe_ip_name = "${var.resource_codes.prefix}-${var.resource_codes.web}-${var.resource_codes.public_ip}-${var.resource_number}"
+    bep_name = "${var.resource_codes.prefix}-${var.resource_codes.ext_load_balancer}-bep-${var.resource_number}"
+    bep_ip = "${var.vnt.addr_space_prefix}.${var.resource_number}.1"
+    outbound_rule_name = "lb-outbound-rule"
+    outbound_rule_protocol = "Tcp"
+    probe_name = "http-probe"
+    probe_port = "80"
+    lb_rule_name = "lb-rule"
+    lb_rule_protocol = "Tcp"
+    lb_rule_fep = "80"
+    lb_rule_bep = "80"
+  }
 }
 
 # 05. mgt vm
@@ -239,6 +256,7 @@ resource "azurerm_windows_virtual_machine" "sql" {
 }
 
 # web
+
 # 11. avset
 # 12. scale set
 # 13. alb

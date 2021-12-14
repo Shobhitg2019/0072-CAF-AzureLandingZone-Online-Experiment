@@ -88,3 +88,13 @@ variable "os_dsk" {
   type = map(string)
   description = "VM OS disk properties."
 }
+
+variable "kvt" {
+  type = map(string)
+  description = "Key Vault resource properties"
+}
+
+variable "app" {
+  type = map(string)
+  description = "Application name"
+}

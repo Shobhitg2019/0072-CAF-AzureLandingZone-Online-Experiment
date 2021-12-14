@@ -119,3 +119,59 @@ resource "azurerm_bastion_host" "bas" {
     public_ip_address_id = azurerm_public_ip.pip[1].id
   }
 }
+
+# external-load-balancer
+
+resource "azurerm_lb" "elb" {
+  name = var.alb.name 
+  location = var.rgp_location
+  resource_group_name = var.rgp_name
+  sku = var.alb.sku
+  frontend_ip_configuration {
+    name = var.alb.fe_ip_name 
+    public_ip_address_id = azurerm_public_ip.pip[0].id
+  }
+}
+
+resource "azurerm_lb_backend_address_pool" "bep" {
+  loadbalancer_id = azurerm_lb.elb.id
+  name = var.alb.bep_name
+}
+
+# https://github.com/hashicorp/terraform-provider-azurerm/issues/14612
+/*
+resource "azurerm_lb_backend_address_pool_address" "bpa" {
+  name = "${azurerm_lb_backend_address_pool.bep.name}-address"
+  backend_address_pool_id = azurerm_lb_backend_address_pool.bep.id 
+  virtual_network_id = azurerm_virtual_network.vnt.id 
+  ip_address = var.alb.bep_ip 
+}
+*/
+resource "azurerm_lb_outbound_rule" "lbo" {
+  resource_group_name = var.rgp_name
+  loadbalancer_id = azurerm_lb.elb.id 
+  name = var.alb.outbound_rule_name 
+  protocol = var.alb.outbound_rule_protocol
+  backend_address_pool_id = azurerm_lb_backend_address_pool.bep.id
+  frontend_ip_configuration {
+    name = var.alb.fe_ip_name
+  }
+}
+
+resource "azurerm_lb_rule" "lbr" {
+  resource_group_name = var.rgp_name
+  loadbalancer_id = azurerm_lb.elb.id 
+  name = var.alb.lb_rule_name
+  protocol = var.alb.lb_rule_protocol
+  frontend_port = tonumber(var.alb.lb_rule_fep)
+  backend_port = tonumber(var.alb.lb_rule_bep)
+  frontend_ip_configuration_name = var.alb.fe_ip_name
+  disable_outbound_snat = true
+}
+
+resource "azurerm_lb_probe" "lbp" {
+  resource_group_name = var.rgp_name
+  loadbalancer_id = azurerm_lb.elb.id 
+  name = var.alb.probe_name 
+  port = tonumber(var.alb.probe_port)
+}

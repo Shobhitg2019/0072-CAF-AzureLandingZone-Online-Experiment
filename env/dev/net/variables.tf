@@ -80,3 +80,8 @@ variable "bas_rnd_str" {
   description = "Random infix for bastion host name."
 }
 
+variable "alb" {
+  type = map(string)
+  description = "Azure Load Balancer properties"
+}
+
