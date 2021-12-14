@@ -168,12 +168,77 @@ module "net" {
       }
     }
   ]
+
+  net_rnd_str = "a${local.rnd_string}"
+  bas_rnd_str = "${local.rnd_string}"
+
+  public_dns_suffix = "${var.region}.cloudapp.azure.com"
+
+  pips = [
+    {
+      name = "${var.resource_codes.prefix}-${var.resource_codes.web}-${var.resource_codes.public_ip}-${var.resource_number}"
+      alloc = "Static"
+      sku = "Standard"
+    },
+    {
+      name = "${var.resource_codes.prefix}-${var.resource_codes.bastion}-${var.resource_codes.public_ip}-${var.resource_number}"
+      alloc = "Static"
+      sku = "Standard"
+    }
+  ]
 }
 
 # 05. mgt vm
 
+resource "azurerm_windows_virtual_machine" "dev" {
+  name = "${var.resource_codes.prefix}${var.resource_codes.development}${var.resource_number}${var.series_suffix}"
+  resource_group_name = azurerm_resource_group.rgp.name 
+  location = azurerm_resource_group.rgp.location
+  size = var.vm_image_dev.size 
+  admin_username = var.vm_cred.username 
+  admin_password = "${data.azurerm_key_vault_secret.vm_pw.value}"
+  network_interface_ids = [ 
+    module.net.dev_nic_id
+  ]
+
+  os_disk {
+    caching = var.os_dsk.cache 
+    storage_account_type = var.os_dsk.sta_type
+  }
+
+  source_image_reference {
+    publisher = var.vm_image_dev.pub 
+    offer = var.vm_image_dev.ofr 
+    sku = var.vm_image_dev.sku
+    version = var.vm_image_dev.ver
+  }
+}
+
+resource "azurerm_windows_virtual_machine" "sql" {
+  name = "${var.resource_codes.prefix}${var.resource_codes.sql}${var.resource_number}${var.series_suffix}"
+  resource_group_name = azurerm_resource_group.rgp.name 
+  location = azurerm_resource_group.rgp.location
+  size = var.vm_image_dev.size 
+  admin_username = var.vm_cred.username 
+  admin_password = "${data.azurerm_key_vault_secret.vm_pw.value}"
+  network_interface_ids = [ 
+    module.net.sql_nic_id
+  ]
+
+  os_disk {
+    caching = var.os_dsk.cache 
+    storage_account_type = var.os_dsk.sta_type
+  }
+
+  source_image_reference {
+    publisher = var.vm_image_sql.pub 
+    offer = var.vm_image_sql.ofr 
+    sku = var.vm_image_sql.sku
+    version = var.vm_image_sql.ver
+  }
+}
+
 # web
-# 10. public-ip
 # 11. avset
 # 12. scale set
 # 13. alb

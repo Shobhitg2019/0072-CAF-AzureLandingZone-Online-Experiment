@@ -59,3 +59,24 @@ variable "nics" {
   }))
   description = "NIC proprties for all VMs."
 }
+
+variable "pips" {
+  type = list(map(string))
+  description = "Public IPs for Bastion and Web services."
+}
+
+variable "net_rnd_str" {
+  type = string 
+  description = "Random string for network resources, taken from rnd_string in main.tf"
+}
+
+variable "public_dns_suffix" {
+  type = string
+  description = "Public DNS suffix for public IP addresses"
+}
+
+variable "bas_rnd_str" {
+  type = string
+  description = "Random infix for bastion host name."
+}
+

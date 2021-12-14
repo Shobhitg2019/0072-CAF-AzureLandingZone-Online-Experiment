@@ -39,3 +39,30 @@ output "ip_config_list" {
   value = azurerm_network_interface.nic
   description = "List of NIC configurations."
 }
+
+output "dev_nic_id" {
+  value = azurerm_network_interface.nic[0].id
+}
+
+output "sql_nic_id" {
+  value = azurerm_network_interface.nic[1].id
+}
+
+output "web01_nic_id" {
+  value = azurerm_network_interface.nic[2].id
+}
+
+output "web02_nic_id" {
+  value = azurerm_network_interface.nic[3].id
+}
+
+
+output "pip_web" {
+  value = azurerm_public_ip.pip[0]
+  description = "Public IP for Web services."
+}
+
+output "pip_bas" {
+  value = azurerm_public_ip.pip[1]
+  description = "Public IP for Azure Bastion service."
+}

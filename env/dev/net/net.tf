@@ -96,5 +96,26 @@ resource "azurerm_network_interface" "nic" {
   }
 }
 
+# 10. public-ips 
+resource "azurerm_public_ip" "pip" {
+  count = length(var.pips)
+  name = var.pips[count.index].name 
+  location = var.rgp_location 
+  resource_group_name = var.rgp_name
+  allocation_method = var.pips[count.index].alloc
+  domain_name_label = "${var.pips[count.index].name}-${var.net_rnd_str}"
+  sku = var.pips[count.index].sku
+}
+
 # 09. bastion
 
+resource "azurerm_bastion_host" "bas" {
+  name = "${var.resource_codes.prefix}-${var.bas_rnd_str}-${var.resource_codes.bastion}-${var.resource_number}"
+  location = var.rgp_location 
+  resource_group_name = var.rgp_name
+  ip_configuration {
+    name = "configuration"
+    subnet_id = azurerm_subnet.bas_snt.id 
+    public_ip_address_id = azurerm_public_ip.pip[1].id
+  }
+}

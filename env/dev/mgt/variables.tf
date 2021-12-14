@@ -64,8 +64,27 @@ variable "sta" {
   description = "Azure storage resource attributes."
 }
 
-variable "dev_vm" {
-  type        = map(string)
-  description = "Management VM image reference."
+variable "vm_image_dev" {
+  type = map(string)
+  description = "Dev VM attributes."
 }
 
+variable "vm_image_sql" {
+  type = map(string)
+  description = "SQL VM attributes."
+}
+variable "vm_image_web" {
+  type = map(string)
+  description = "Web VM attributes."
+}
+
+variable "vm_cred" {
+  type = map(string)
+  description = "VM credentials."
+  sensitive = true
+}
+
+variable "os_dsk" {
+  type = map(string)
+  description = "VM OS disk properties."
+}
