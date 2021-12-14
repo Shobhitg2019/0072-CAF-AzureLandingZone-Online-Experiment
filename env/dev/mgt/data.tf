@@ -1,7 +1,6 @@
 data "azurerm_key_vault_secret" "vm_pw" {
     name = "adminuser"
-    vault_uri = "https://azr-37509763-kvt-10.vault.azure.net/"
-    resource_group_name = azurerm_resource_group.rgp.name
+    key_vault_id = "/subscriptions/51bf817c-66af-4ca8-bcac-13d3df80171a/resourceGroups/azr-rgp-10/providers/Microsoft.KeyVault/vaults/azr-37509763-kvt-10"
     depends_on = [
       azurerm_key_vault.kvt
     ]
