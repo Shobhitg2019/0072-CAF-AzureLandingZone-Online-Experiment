@@ -1,3 +1,4 @@
+# https://linuxconfig.org/how-to-setup-the-nginx-web-server-on-ubuntu-18-04-bionic-beaver-linux
 resource "azurerm_linux_virtual_machine_scale_set" "lvmss" {
   name = var.lvmss.core.name 
   resource_group_name = var.rgp_name 
@@ -31,7 +32,9 @@ resource "azurerm_linux_virtual_machine_scale_set" "lvmss" {
     enable_automatic_os_upgrade = true
     disable_automatic_rollback = true
   }
- 
+  
+  # Create NGNIX web site
+  # custom_data = filebase64("new-nginx-web.sh")
   terminate_notification {
     enabled = true 
     timeout = "PT5M"
