@@ -58,11 +58,20 @@ output "web02_nic_id" {
 
 
 output "pip_web" {
-  value = azurerm_public_ip.pip[0]
+  value = azurerm_public_ip.pip[0].ip_address
   description = "Public IP for Web services."
 }
 
 output "pip_bas" {
   value = azurerm_public_ip.pip[1]
   description = "Public IP for Azure Bastion service."
+}
+output "lbp_id" {
+  value = azurerm_lb_probe.lbp.id
+  description = "Load balancer probe id."
+}
+
+output "load_bal_id" {
+  value = azurerm_lb.elb.id
+  description = "Load balancer id."
 }

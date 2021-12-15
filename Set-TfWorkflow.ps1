@@ -62,6 +62,7 @@ Create a directory structure to support Terraform workflows
 <#
 TASK-ITEMS:
 001. Add the doc folder and subfolders automatically.
+002. Automate key vault and secrets provisioning in the shared resource group.
 #>
 
 [CmdletBinding()]

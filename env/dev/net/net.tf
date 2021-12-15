@@ -135,7 +135,17 @@ resource "azurerm_lb" "elb" {
 
 resource "azurerm_lb_backend_address_pool" "bep" {
   loadbalancer_id = azurerm_lb.elb.id
-  name = var.alb.bep_name
+  name = "BackEndAddressPool"
+  
+/*
+  backend_address {
+    name = "bep-address"
+    virtual_network_id = azurerm_virtual_network.vnt.id
+    # ip_address = var.alb.bep_ip
+    
+  
+  }
+*/
 }
 
 # https://github.com/hashicorp/terraform-provider-azurerm/issues/14612
@@ -158,6 +168,15 @@ resource "azurerm_lb_outbound_rule" "lbo" {
   }
 }
 
+resource "azurerm_lb_probe" "lbp" {
+  resource_group_name = var.rgp_name
+  loadbalancer_id = azurerm_lb.elb.id 
+  name = var.alb.probe_name 
+  port = tonumber(var.alb.probe_port)
+  interval_in_seconds = 5
+  number_of_probes = 2
+}
+
 resource "azurerm_lb_rule" "lbr" {
   resource_group_name = var.rgp_name
   loadbalancer_id = azurerm_lb.elb.id 
@@ -165,13 +184,8 @@ resource "azurerm_lb_rule" "lbr" {
   protocol = var.alb.lb_rule_protocol
   frontend_port = tonumber(var.alb.lb_rule_fep)
   backend_port = tonumber(var.alb.lb_rule_bep)
+  backend_address_pool_id = azurerm_lb_backend_address_pool.bep.id
+  probe_id = azurerm_lb_probe.lbp.id
   frontend_ip_configuration_name = var.alb.fe_ip_name
   disable_outbound_snat = true
-}
-
-resource "azurerm_lb_probe" "lbp" {
-  resource_group_name = var.rgp_name
-  loadbalancer_id = azurerm_lb.elb.id 
-  name = var.alb.probe_name 
-  port = tonumber(var.alb.probe_port)
 }

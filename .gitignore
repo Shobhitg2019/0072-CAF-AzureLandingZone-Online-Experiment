@@ -92,3 +92,6 @@ terraform.rc
 
 # Diagrams
 **/doc/**
+
+# SSH keys
+**/.ssh/**

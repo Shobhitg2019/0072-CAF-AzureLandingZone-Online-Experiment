@@ -96,5 +96,5 @@ variable "kvt" {
 
 variable "app" {
   type = map(string)
-  description = "Application name"
+  description = "Application name and id."
 }

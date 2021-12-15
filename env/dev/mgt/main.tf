@@ -256,7 +256,47 @@ resource "azurerm_windows_virtual_machine" "sql" {
 }
 
 # web
-
+module "web" {
+  source = "../web"
+  lvmss = {
+    core = {
+      name = "${var.resource_codes.prefix}${var.resource_codes.web}${var.resource_number}"
+      sku = "Standard_F2"
+      instances = 2
+    }
+    ssh = {
+      pub_ssh_key = file("~/.ssh/id_rsa.pub")
+    }
+    
+    vm_image_web = {
+      pub = "Canonical"
+      ofr = "UbuntuServer"
+      sku = "18.04-LTS"
+      ver = "latest"
+    }
+    os_dsk = {
+      sta_type = "Standard_LRS"
+      cache = "ReadWrite"
+    }
+    nic = {
+      name = "${var.resource_codes.prefix}${var.resource_codes.web}${var.resource_number}"
+      subnet_id = module.net.web_snt_id
+    }
+  }
+  vmss_cred = "adminuser"
+  rgp_name = azurerm_resource_group.rgp.name 
+  rgp_location = azurerm_resource_group.rgp.location
+  sta_pri_ep = data.azurerm_storage_account.sta.primary_blob_endpoint
+  lbp_id = module.net.lbp_id
+  lb_pip = module.net.pip_web
+  pip_name = "${var.resource_codes.prefix}-${var.resource_codes.web}-${var.resource_codes.public_ip}-${var.resource_number}"
+  web_dnl = "${var.resource_codes.prefix}-${var.resource_codes.web}-${var.app.name}"
+  alb_bep_name = "${var.resource_codes.prefix}-${var.resource_codes.ext_load_balancer}-${local.rnd_string}-${var.resource_number}"
+  lb_id = module.net.load_bal_id
+  depends_on = [
+    module.net
+  ]
+}
 # 11. avset
 # 12. scale set
 # 13. alb
