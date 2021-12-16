@@ -4,10 +4,11 @@ This project is an experiment to deploy an IaaS based Online application to the 
 
 # Project Objectives
 
-This is really just an experiment for us which aims to establish a basic framework based on my current perception of Terraform best practices (Personally, I just started learning Terraform in December 2021, so as I learn of other or better best practices, our experiment here will evolve based on the principles of continuous improvement ('kaizen', 'kanban', and 'ikigai' for my Japanese or DevOps oriented readers!) ;-). For now, this project specifically addresses automating the provision of Azure resources using a scripted and CLI deployment approach with PowerShell (PowerShell Core, version 7.x) and Terraform.
+This is really just an experiment for us which aims to establish a basic framework based on my current perception of Terraform best practices (Personally, I just started learning Terraform in December 2021, so as I learn of other or better best practices, our experiment here will evolve based on the principles of continuous improvement ('kaizen', 'kanban', and 'ikigai' for my Japanese or DevOps oriented readers!) ;-).
+
 # Getting Started
 
-To start using this project, we recommend cloning it to your local system, review the the PowerShell script Set-TfWorkflow.ps1 and execute it to set up your Terraform directory structure, automate the provisioning of your backend state file in an Azure storage account and container, and set your logging environment variables for the log level and path.
+To start using this project, we recommend cloning it to your local system, set up your Terraform directory structure, create your backend state file out-of-band (i.e. in an Azure storage account and container), and set your logging environment variables for the log level and path.
 
 # Test
 
