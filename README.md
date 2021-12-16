@@ -14,11 +14,14 @@ To start using this project, we recommend cloning it to your local system, set u
 
 ![_Figure: Target State Diagram_](./doc/images/0072-tsd-diagram.png "TSD")
 # Contribute
-Please feel free to get involved by reporting problems, suggest ideas or improve this project by making the code better. 
+
+Please feel free to get involved by reporting problems, suggest ideas or improve this project by making the code better.
 To report problems and suggest ideas, please create an issue for this script, which will ensure that it is properly addressed.
 For contributing to this project, please follow the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) for coding/testing practices and pull request requirements.
 This project is released under the [MIT license](https://mit-license.org/).
 
 # References
 
-1. [Terraform Best Practices - Jack Roper](https://medium.com/codex/terraform-best-practices-how-to-structure-your-terraform-projects-b5b050eab554)
+1. [Terraform Intro] (<https://www.terraform.io/intro/> "Terraform Intro")
+2. [stackoverflow] (<https://stackoverflow.com/questions/66024950/how-to-organize-terraform-modules-for-multiple-environments/> "stackoverflow")
+3. [Terraform Best Practices - Jack Roper](<https://medium.com/codex/terraform-best-practices-how-to-structure-your-terraform-projects-b5b050eab554/> "Best Practices Blog")
