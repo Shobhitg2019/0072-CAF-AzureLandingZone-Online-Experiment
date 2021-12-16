@@ -10,9 +10,9 @@ This is really just an experiment for us which aims to establish a basic framewo
 
 To start using this project, we recommend cloning it to your local system, set up your Terraform directory structure, create your backend state file out-of-band (i.e. in an Azure storage account and container), and set your logging environment variables for the log level and path.
 
-# Test
+# Target State Diagram
 
-Under construction.
+![_Figure: Target State Diagram_](./doc/images/0072-tsd-diagram.png "TSD"){ width=100% }
 # Contribute
 Please feel free to get involved by reporting problems, suggest ideas or improve this project by making the code better. 
 To report problems and suggest ideas, please create an issue for this script, which will ensure that it is properly addressed.
