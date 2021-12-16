@@ -10,6 +10,10 @@ sudo ufw enable
 # Allow incomming connection via port 80
 sudo ufw allow 80/tcp 
 
+# Restart Nginx
+sudo systemctl restart nginx
+
+# task-item: integrate with a post provisioning configuration
 << comment
 # Define custom server block
 sudo mkdir /var/www/example 
@@ -31,6 +35,3 @@ server {
     server_name www.example.lan;
 }
 comment
-
-# Restart Nginx
-sudo systemctl restart nginx

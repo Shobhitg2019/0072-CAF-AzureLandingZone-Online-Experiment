@@ -48,15 +48,6 @@ output "sql_nic_id" {
   value = azurerm_network_interface.nic[1].id
 }
 
-output "web01_nic_id" {
-  value = azurerm_network_interface.nic[2].id
-}
-
-output "web02_nic_id" {
-  value = azurerm_network_interface.nic[3].id
-}
-
-
 output "pip_web" {
   value = azurerm_public_ip.pip[0].ip_address
   description = "Public IP for Web services."

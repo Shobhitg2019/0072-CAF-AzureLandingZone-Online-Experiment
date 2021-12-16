@@ -70,13 +70,13 @@ param (
 		# Log directory
 		# i.e. "\\server\share\logs"
         [string]$LogDirectory = $env:USERPROFILE,
-		[string]$resourceGroupName = "tf-shared-rgp-01",
 		[string]$region = "eastus2",
 		[string]$staPrefix = "1tfm",
 		[string]$staContainer = "dev-tfstate",
 		[string]$tfstateKey = "dev.tfstate",
 		[string]$tfConfigFile = "backend.tf",
 		[string]$resourceInfix = ((New-Guid).Guid).Substring(0,8),
+		[string]$resourceGroupName = "tf-$resourceInfix-rgp-01",
 		[string]$PSModuleRepository = "PSGallery"
 ) #end param
 

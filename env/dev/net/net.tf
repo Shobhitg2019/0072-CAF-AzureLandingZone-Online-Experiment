@@ -60,8 +60,6 @@ resource "azurerm_network_security_group" "nsg" {
   resource_group_name = var.rgp_name
   tags = var.tags
 }
-
-
 resource "azurerm_network_security_rule" "nsr" {
   count = length(var.nsg_rules)
   name = var.nsg_rules[count.index].name 
@@ -83,7 +81,6 @@ resource "azurerm_subnet_network_security_group_association" "sga" {
 }
 
 # 09. nics
-
 resource "azurerm_network_interface" "nic" {
   count = length(var.nics)
   name = var.nics[count.index].ipconfig.name 
@@ -121,7 +118,6 @@ resource "azurerm_bastion_host" "bas" {
 }
 
 # external-load-balancer
-
 resource "azurerm_lb" "elb" {
   name = var.alb.name 
   location = var.rgp_location

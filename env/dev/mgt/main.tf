@@ -151,22 +151,6 @@ module "net" {
         sub_id       = module.net.dev_snt_id
         prv_ip_alloc = "Dynamic"
       }
-    },
-    {
-      vm = "web01"
-      ipconfig = {
-        name         = "${var.resource_codes.prefix}${var.resource_codes.web}${tostring(var.resource_number)}-nic-01"
-        sub_id       = module.net.dev_snt_id
-        prv_ip_alloc = "Dynamic"
-      }
-    },
-    {
-      vm = "web02"
-      ipconfig = {
-        name         = "${var.resource_codes.prefix}${var.resource_codes.web}${tostring(var.resource_number)}-nic-02"
-        sub_id       = module.net.dev_snt_id
-        prv_ip_alloc = "Dynamic"
-      }
     }
   ]
 
