@@ -12,7 +12,7 @@ To start using this project, we recommend cloning it to your local system, set u
 
 # Target State Diagram
 
-![_Figure: Target State Diagram_](./doc/images/0072-tsd-diagram.png "TSD"){ width=100% }
+![_Figure: Target State Diagram_](./doc/images/0072-tsd-diagram.png "TSD")
 # Contribute
 Please feel free to get involved by reporting problems, suggest ideas or improve this project by making the code better. 
 To report problems and suggest ideas, please create an issue for this script, which will ensure that it is properly addressed.
