@@ -453,6 +453,7 @@ else
 // backend state file
 terraform {
   backend "azurerm" {
+	  # The resource group and storage account names below will contain a random value generated from the PowerShell script Set-TfWorkflow.ps1
       resource_group_name = "$resourceGroupName"
       storage_account_name = "$storageAccountName"
       container_name = "$staContainer"
